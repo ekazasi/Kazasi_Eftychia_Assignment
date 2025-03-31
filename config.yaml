@@ -1,0 +1,18 @@
+  input_fasta: "./knownCanonical.exonAA.fa"  # Update with the actual input FASTA file path
+  output_directory: "./output"  # Update with the desired output directory path
+  alignments_directory: "./output/alignments"  # Subdirectory for alignments
+  trees_directory: "./output/trees"  # Subdirectory for tree
+  genes_directory: "./output/genes"  # Subdirectory for genes
+  genes_trees_directory: "./output/genes_trees"  # Subdirectory for gene trees
+  iqtree_params_first: "-m MFP -bb 1000 -alrt 1000"
+  iqtree_params_second: "-m TEST -nt AUTO -bb 1000 -alrt 1000"
+  alignment_limit: 500 # Limit for the number of alignments
+  genes_limit: 500 # Limit for the number of genes
+  top5_exons_file: "top5_exons.txt"  # File to store the top 5 exons
+  last5_exons_file: "last5_exons.txt" # File to store the last 5 exons
+  top5_genes_file: "top5_genes.txt"  # File to store the top 5 genes
+  last5_genes_file: "last5_genes.txt" # File to store the last 5 genes
+
+  iqtree: "./iqtree2"  # Path or command for IQ-TREE tool
+  merge_script: "./merge_sequences"  # Path to the merge_sequences script
+  compare_script: "./compare_trees.R"  # Path to the compare_trees R script
